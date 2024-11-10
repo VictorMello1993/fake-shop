@@ -19,7 +19,7 @@ spec:
       - containerPort: 5432
       env:
        - name: POSTGRES_DB
-         value: fakeshopdb
+         value: fakeshop
        - name: POSTGRES_USER
          value: fakeshop
        - name: POSTGRES_PASSWORD
@@ -36,7 +36,7 @@ spec:
  - port: 5432
    targetPort: 5432
 ---
-#Deployment web app
+# #Deployment web app
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -52,7 +52,7 @@ spec:
   spec:
    containers:
     - name: fakeshop
-      image: victormello93/fake-shop:v1
+      image: victormello93/fakeshop:v1
       ports:
       - containerPort: 5000
       env:
